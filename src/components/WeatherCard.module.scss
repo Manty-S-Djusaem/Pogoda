@@ -1,0 +1,75 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    // background-color: #c0c0c0;
+    max-width: 600px;
+    max-height: 400px;
+
+
+    h2{
+        text-align: center;
+        font-weight: 600;
+        font-size: 30px;
+        color: #FAF9F6;
+    }
+
+    .card_image{
+        text-align: center;
+        width: 56px;
+        margin: 0 auto;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .temperature, .currentDay{
+        font-size: 44px;
+        font-weight: 600;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .currentDate{
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+
+    }
+
+    .temperature{
+        color: #FAF9F6;
+    }
+
+    .num_data{
+        text-align: center;
+        color: #FAF9F6;
+    }
+
+    .data_week{
+        text-align: center;
+        color: #FAF9F6;
+        font-size: 25px;
+    }
+}
+
+// .container :hover{
+//     // filter: brightness(90%);
+//     animation: ease-in;
+//     background-color: rgba($color: hsl(0, 14%, 69%), $alpha: 0.5);
+//     transition: 0.1s;
+//     box-shadow: 0 0 20px gray;
+// }
+
+.container{
+    max-width: 600px;
+    margin: 0 auto;
+    // background-color: white;
+    padding: 30px;
+    margin-bottom: 50px;
+
+    h2{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+    }
+}
