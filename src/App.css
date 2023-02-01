@@ -5,3 +5,8 @@ body{
     background-size: cover;
     background-image: url("./assets/Dark_Clouds.jpg");
 }
+
+p{
+    display: flex;
+    color: #FAF9F6;
+}

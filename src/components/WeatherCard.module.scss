@@ -4,7 +4,7 @@
     // background-color: #c0c0c0;
     max-width: 600px;
     max-height: 400px;
-
+    text-align: center;
 
     h2{
         text-align: center;
@@ -23,7 +23,7 @@
         }
     }
 
-    .temperature, .currentDay{
+    .currentDay{
         font-size: 44px;
         font-weight: 600;
         text-align: center;
@@ -37,29 +37,27 @@
 
     }
 
-    .temperature{
+    .city{
         color: #FAF9F6;
+        font-size: 44px;
     }
 
-    .num_data{
+    .temperature{
         text-align: center;
         color: #FAF9F6;
+        font-size: 35px;
     }
 
-    .data_week{
+    .description{
         text-align: center;
         color: #FAF9F6;
         font-size: 25px;
     }
 }
 
-// .container :hover{
-//     // filter: brightness(90%);
-//     animation: ease-in;
-//     background-color: rgba($color: hsl(0, 14%, 69%), $alpha: 0.5);
-//     transition: 0.1s;
-//     box-shadow: 0 0 20px gray;
-// }
+.currentDay, .description, .temperature, .city{
+    justify-content: center;
+}
 
 .container{
     max-width: 600px;
@@ -67,6 +65,8 @@
     // background-color: white;
     padding: 30px;
     margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
 
     h2{
         font-family: 'Montserrat', sans-serif;
