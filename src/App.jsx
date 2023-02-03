@@ -39,6 +39,7 @@ function App() {
         <Route path="*" element={<NotPageFound />} />
       </Routes>
       <Navbar></Navbar>
+        <Search />
       {/* <Frst></Frst> */}
       {/* <WeatherCard></WeatherCard> */}
     </div >

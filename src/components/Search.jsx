@@ -5,7 +5,7 @@ function Search(props) {
 
     const [weatherState, setWatherState] = React.useState([])
     const API_KEY = '195f6198cdf22a2f90f90eedbe796bcb'
-    const URL = 'http://api.openweathermap.org/data/2.5/forecast/daily'
+    const URL = 'https://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=195f6198cdf22a2f90f90eedbe796bcb'
     console.log(URL);
 
     let city = ''
