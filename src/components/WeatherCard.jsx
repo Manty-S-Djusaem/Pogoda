@@ -32,7 +32,6 @@ function WeatherCard(props) {
     return (
         <div className={module.container}>
             <div className={module.card}>
-
                 <div className={module.card_image}>
                     <img src={sun} />
                 </div>
@@ -48,13 +47,67 @@ function WeatherCard(props) {
                 </div>
 
                 {weather && (
-                    <div>
-                        <p className={module.city}>{weather.city.name}</p>
+                    <div className={module.days}>
+                        <div className={module.card1}>
+                            <p className={module.city}>{weather.city.name}</p>
 
-                        <p className={module.temperature}>{weather.list[0].main.temp}°C</p>
+                            <p className={module.temperature}>{weather.list[9].main.temp}°K</p>
 
-                        <p className={module.description}></p>
-                        <p className={module.description}></p>
+                            <p className={module.description}>{weather.list[0].weather[0].main}</p>
+                        </div>
+
+                        <div className={module.card2}>
+                            <p className={module.city}>{weather.city.name}</p>
+
+                            <p className={module.temperature}>{weather.list[1].main.temp}°K</p>
+
+                            <p className={module.description}>{weather.list[1].weather[0].main}</p>
+                        </div>
+
+                        <div className={module.card3}>
+                            <p className={module.city}>{weather.city.name}</p>
+
+                            <p className={module.temperature}>{weather.list[2].main.temp}°K</p>
+
+                            <p className={module.description}>{weather.list[2].weather[0].main}</p>
+                        </div>
+
+                        <div className={module.card4}>
+                            <p className={module.city}>{weather.city.name}</p>
+
+                            <p className={module.temperature}>{weather.list[3].main.temp}°K</p>
+
+                            <p className={module.description}>{weather.list[3].weather[0].main}</p>
+                        </div>
+
+                        <div className={module.card5}>
+                            <p className={module.city}>{weather.city.name}</p>
+
+                            <p className={module.temperature}>{weather.list[4].main.temp}°K</p>
+
+                            <p className={module.description}>{weather.list[4].weather[0].main}</p>
+                        </div>
+
+
+                    </div>
+                )}
+
+                {weather && (
+                    <div className={module.dayly}>
+                        <div className={module.timeCards}>
+                            <p className={module.dayCards}>Morning</p>
+                            <p className={module.dayD}></p>
+                        </div>
+
+                        <div className={module.timeCards}>
+                            <p className={module.dayCards}>Day</p>
+                            <p className={module.dayD}></p>
+                        </div>
+
+                        <div className={module.timeCards}>
+                            <p className={module.dayCards}>Evening</p>
+                            <p className={module.dayD}></p>
+                        </div>
                     </div>
                 )}
                 <div className={module.num_data}>
