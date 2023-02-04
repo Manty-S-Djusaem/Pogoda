@@ -20,7 +20,7 @@ function WeatherCard(props) {
     const [weather, setWeather] = useState(null);
 
     const searchPressed = () => {
-        fetch(`${api.base}forecast?q=${api.city_name}&appid=${api.key}`)
+        fetch(`${api.base}forecast?q=${search}&appid=${api.key}`)
 
             .then(res => res.json())
             .then((result) => {
@@ -38,7 +38,7 @@ function WeatherCard(props) {
                 <div className={module.currentDay}>
                     <Clock />
                 </div>
-                <div>
+                <div className={module.searchM}>
                     <input
                         type='text' placeholder='Enter city/town...'
                         onChange={(e) => setSearch(e.target.value)}
@@ -47,67 +47,69 @@ function WeatherCard(props) {
                 </div>
 
                 {weather && (
-                    <div className={module.days}>
-                        <div className={module.card1}>
-                            <p className={module.city}>{weather.city.name}</p>
 
-                            <p className={module.temperature}>{weather.list[9].main.temp}°K</p>
-
-                            <p className={module.description}>{weather.list[0].weather[0].main}</p>
+                    <div className={module.dayly}>
+                        <div className={module.timeCards}>
+                            <p className={module.day_data}>Morning</p>
+                            <p className={module.dayCards}>{weather.list[10].main.temp}°C</p>
                         </div>
 
-                        <div className={module.card2}>
-                            <p className={module.city}>{weather.city.name}</p>
-
-                            <p className={module.temperature}>{weather.list[1].main.temp}°K</p>
-
-                            <p className={module.description}>{weather.list[1].weather[0].main}</p>
+                        <div className={module.timeCards}>
+                            <p className={module.day_data}>Day</p>
+                            <p className={module.dayCards}>{weather.list[12].main.temp}°C</p>
                         </div>
 
-                        <div className={module.card3}>
-                            <p className={module.city}>{weather.city.name}</p>
-
-                            <p className={module.temperature}>{weather.list[2].main.temp}°K</p>
-
-                            <p className={module.description}>{weather.list[2].weather[0].main}</p>
+                        <div className={module.timeCards}>
+                            <p className={module.day_data}>Evening</p>
+                            <p className={module.dayCards}>{weather.list[15].main.temp}°C</p>
                         </div>
-
-                        <div className={module.card4}>
-                            <p className={module.city}>{weather.city.name}</p>
-
-                            <p className={module.temperature}>{weather.list[3].main.temp}°K</p>
-
-                            <p className={module.description}>{weather.list[3].weather[0].main}</p>
-                        </div>
-
-                        <div className={module.card5}>
-                            <p className={module.city}>{weather.city.name}</p>
-
-                            <p className={module.temperature}>{weather.list[4].main.temp}°K</p>
-
-                            <p className={module.description}>{weather.list[4].weather[0].main}</p>
-                        </div>
-
-
                     </div>
+
                 )}
 
                 {weather && (
-                    <div className={module.dayly}>
-                        <div className={module.timeCards}>
-                            <p className={module.dayCards}>Morning</p>
-                            <p className={module.dayD}></p>
+                    <div className={module.days}>
+                        <div className={module.card1}>
+                            <p className={module.city}>Mond</p>
+
+                            <p className={module.temperature}>{weather.list[13].main.temp-273}°C</p>
+
+                            <p className={module.description}>{weather.list[13].weather[0].description}</p>
                         </div>
 
-                        <div className={module.timeCards}>
-                            <p className={module.dayCards}>Day</p>
-                            <p className={module.dayD}></p>
+                        <div className={module.card2}>
+                            <p className={module.city}>Tuesd</p>
+
+                            <p className={module.temperature}>{weather.list[21].main.temp}°C</p>
+
+                            <p className={module.description}>{weather.list[21].weather[0].description}</p>
                         </div>
 
-                        <div className={module.timeCards}>
-                            <p className={module.dayCards}>Evening</p>
-                            <p className={module.dayD}></p>
+                        <div className={module.card3}>
+                            <p className={module.city}>Wensd</p>
+
+                            <p className={module.temperature}>{weather.list[29].main.temp}°C</p>
+
+                            <p className={module.description}>{weather.list[29].weather[0].description}</p>
                         </div>
+
+                        <div className={module.card4}>
+                            <p className={module.city}>Thsd</p>
+
+                            <p className={module.temperature}>{weather.list[37].main.temp}°K</p>
+
+                            <p className={module.description}>{weather.list[37].weather[0].description}</p>
+                        </div>
+
+                        <div className={module.card5}>
+                            <p className={module.city}>Fridy</p>
+
+                            <p className={module.temperature}>{weather.list[0].main.temp}°K</p>
+
+                            <p className={module.description}>{weather.list[0].weather[0].description}</p>
+                        </div>
+
+
                     </div>
                 )}
                 <div className={module.num_data}>

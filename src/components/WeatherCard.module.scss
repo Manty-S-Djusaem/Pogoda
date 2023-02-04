@@ -6,6 +6,22 @@
     max-height: 400px;
     text-align: center;
 
+    .searchM{
+        input{
+            background: transparent;
+            border: none;
+            color: #FAF9F6;
+            text-decoration: underline;
+        }
+
+        button{
+            border-radius: 40px;
+            border-color: #FAF9F6;
+            background: transparent;
+            color: #FAF9F6;
+        }
+    }
+
     h2{
         text-align: center;
         font-weight: 600;
@@ -89,6 +105,7 @@
         display: flex;
         flex-direction: column;
         margin: 5px;
+        justify-content: flex-start;
     }
 
     .card2{
@@ -96,6 +113,8 @@
         flex-direction: column;
         justify-content: space-around;
         margin: 5px;
+        justify-content: flex-start;
+        margin-left: 40px;
 
     }
 
@@ -103,18 +122,24 @@
         display: flex;
         flex-direction: column;
         margin: 5px;
+        justify-content: flex-start;
+        margin-left: 40px;
     }
 
     .card4{
         display: flex;
         flex-direction: column;
         margin: 5px;
+        justify-content: flex-start;
+        margin-left: 40px;
     }
 
     .card5{
         display: flex;
         flex-direction: column;
         margin: 5px;
+        justify-content: flex-start;
+        margin-left: 40px;
     }
 }
 
@@ -130,7 +155,7 @@
     justify-content: space-between;
     font-size: 30px;
 
-    .dayD{
-
+    .day_data{
+        text-align: center;
     }
 }
