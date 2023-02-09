@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import module from './Clock.module.scss'
 
 function Clock(props) {
-    const [clockState, setClockState] = useState(0);
+    const [clockState, setClockState] = useState('⠀');
 
     useEffect(() => {
         setInterval(() => {

@@ -31,10 +31,10 @@ function Search(props) {
     // }
     return (
         <div>
-            <form>
+            {/* <form>
                 <input onChange={loadingData} type="text" placeholder='Здесь'></input>
             </form>
-            <button onClick={(loadingData) => setTime}>Поиск</button>
+            <button onClick={(loadingData) => setTime}>Поиск</button> */}
         </div>
     );
 }

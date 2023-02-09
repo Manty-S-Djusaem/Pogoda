@@ -38,7 +38,7 @@ function WeatherCard(props) {
                 <div className={module.currentDay}>
                     <Clock />
                 </div>
-                <div className={module.searchM}>
+                <div className={module.searchM}>    
                     <input
                         type='text' placeholder='Enter city/town...'
                         onChange={(e) => setSearch(e.target.value)}
@@ -51,17 +51,17 @@ function WeatherCard(props) {
                     <div className={module.dayly}>
                         <div className={module.timeCards}>
                             <p className={module.day_data}>Morning</p>
-                            <p className={module.dayCards}>{weather.list[10].main.temp}°C</p>
+                            <p className={module.dayCards}>{Math.round(weather.list[10].main.temp - 273)}°C</p>
                         </div>
 
                         <div className={module.timeCards}>
                             <p className={module.day_data}>Day</p>
-                            <p className={module.dayCards}>{weather.list[12].main.temp}°C</p>
+                            <p className={module.dayCards}>{Math.round(weather.list[12].main.temp - 273)}°C</p>
                         </div>
 
                         <div className={module.timeCards}>
                             <p className={module.day_data}>Evening</p>
-                            <p className={module.dayCards}>{weather.list[15].main.temp}°C</p>
+                            <p className={module.dayCards}>{Math.round(weather.list[15].main.temp - 273)}°C</p>
                         </div>
                     </div>
 
@@ -72,15 +72,15 @@ function WeatherCard(props) {
                         <div className={module.card1}>
                             <p className={module.city}>Mond</p>
 
-                            <p className={module.temperature}>{weather.list[13].main.temp-273}°C</p>
+                            <p className={module.temperature}>{Math.round(weather.list[5].main.temp - 273)}°C</p>
 
-                            <p className={module.description}>{weather.list[13].weather[0].description}</p>
+                            <p className={module.description}>{weather.list[5].weather[0].description}</p>
                         </div>
 
                         <div className={module.card2}>
                             <p className={module.city}>Tuesd</p>
 
-                            <p className={module.temperature}>{weather.list[21].main.temp}°C</p>
+                            <p className={module.temperature}>{Math.round(weather.list[21].main.temp - 273)}°C</p>
 
                             <p className={module.description}>{weather.list[21].weather[0].description}</p>
                         </div>
@@ -88,7 +88,7 @@ function WeatherCard(props) {
                         <div className={module.card3}>
                             <p className={module.city}>Wensd</p>
 
-                            <p className={module.temperature}>{weather.list[29].main.temp}°C</p>
+                            <p className={module.temperature}>{Math.round(weather.list[29].main.temp - 273)}°C</p>
 
                             <p className={module.description}>{weather.list[29].weather[0].description}</p>
                         </div>
@@ -96,7 +96,7 @@ function WeatherCard(props) {
                         <div className={module.card4}>
                             <p className={module.city}>Thsd</p>
 
-                            <p className={module.temperature}>{weather.list[37].main.temp}°K</p>
+                            <p className={module.temperature}>{Math.round(weather.list[37].main.temp - 273)}°C</p>
 
                             <p className={module.description}>{weather.list[37].weather[0].description}</p>
                         </div>
@@ -104,7 +104,7 @@ function WeatherCard(props) {
                         <div className={module.card5}>
                             <p className={module.city}>Fridy</p>
 
-                            <p className={module.temperature}>{weather.list[0].main.temp}°K</p>
+                            <p className={module.temperature}>{Math.round(weather.list[0].main.temp - 273)}°C</p>
 
                             <p className={module.description}>{weather.list[0].weather[0].description}</p>
                         </div>
